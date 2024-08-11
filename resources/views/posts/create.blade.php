@@ -12,11 +12,13 @@
             @csrf
             <div>
                 <label for="title">タイトル</label>
-                <input type="text" name="post[title]">
+                <input type="text" name="post[title]" value="{{ old("post.title") }}">
+                <p class="title_error" style="color:red">{{$errors->first("post.title")}}</p>
             </div>
             <div>
                 <label for="body">本文</label>
-                <textarea type="text" name="post[body]"></textarea>
+                <textarea type="text" name="post[body]" value="{{ old("post.body") }}"></textarea>
+                <p class="body_error" style="color:red">{{$errors->first("post.body")}}</p>
             </div>
             <input type="submit" value="送信"/>
         </form>
