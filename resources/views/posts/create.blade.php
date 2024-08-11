@@ -9,15 +9,16 @@
             <h1>Blog title</h1>
         </div>
         <form action="/posts" method="POST">
+            @csrf
             <div>
                 <label for="title">タイトル</label>
-                <input type="text" id="title" name="title">
+                <input type="text" name="post[title]">
             </div>
             <div>
                 <label for="body">本文</label>
-                <input type="text" id="body" name="body">
+                <textarea type="text" name="post[body]"></textarea>
             </div>
-            <input type="submit" value="送信">
+            <input type="submit" value="送信"/>
         </form>
         <a href="/">back</a>
     </body>
