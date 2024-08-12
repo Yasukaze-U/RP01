@@ -18,7 +18,7 @@
             </div>
             <div>
                 <label for="body">本文</label>
-                <textarea type="text" name="post[body]" value="{{ $post->body }}"></textarea>
+                <textarea type="text" name="post[body]">{{ $post->body }}</textarea>
                 <p class="body_error" style="color:red">{{$errors->first("post.body")}}</p>
             </div>
             <input type="submit" value="保存"/>
