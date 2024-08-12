@@ -11,6 +11,7 @@
         </div>
         <form action="/posts/{{$post->id}}" method="POST">
             @csrf
+            @method("PUT")
             <div>
                 <label for="title">タイトル</label>
                 <input type="text" name="post[title]" value="{{ $post->title }}">
